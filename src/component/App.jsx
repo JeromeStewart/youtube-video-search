@@ -25,7 +25,10 @@ class App extends Component {
     this.setState({
       searchInput: e.currentTarget.value
     });
+    localStorage.setItem("term", e.currentTarget.value);
   };
+
+  //Handle Youtube API request in this method.
 
   handleSubmit = async e => {
     e.preventDefault();
