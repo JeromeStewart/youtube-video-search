@@ -6,7 +6,3 @@ This application searches for videos on youtube using the [YouTube Data API v3](
 
 A simple youtube video search web app that let's users search for youtube videos, and navigate between
 pages. Five videos are displayed at a time, and the videos are ordered by view count.
-
-# Usage demo
-
-coming soon..
