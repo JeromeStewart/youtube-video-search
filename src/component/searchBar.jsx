@@ -9,11 +9,7 @@ const SearchBar = props => {
       <Form.Field>
         <label>Video search</label>
         <input
-          value={
-            localStorage.length > 0
-              ? localStorage.getItem("term")
-              : props.searchTerm
-          }
+          value={props.searchTerm}
           onChange={props.onSearch}
           placeholder="Search"
         />

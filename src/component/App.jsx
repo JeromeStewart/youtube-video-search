@@ -21,11 +21,17 @@ class App extends Component {
     this.searchTerm = React.createRef();
   }
 
+  componentDidMount = () => {
+    const localSearchterm =
+      localStorage["term"] !== null ? localStorage.getItem("term") : "";
+
+    this.setState({ searchInput: localSearchterm });
+  };
+
   HandleSearch = e => {
     this.setState({
       searchInput: e.currentTarget.value
     });
-    localStorage.setItem("term", e.currentTarget.value);
   };
 
   //Handle Youtube API request in this method.
@@ -35,6 +41,8 @@ class App extends Component {
     const response = await youtubeApi.get("search", {
       params: { q: this.state.searchInput }
     });
+
+    localStorage.setItem("term", this.state.searchInput);
 
     const pageToken = { ...this.state.pageToken };
 
