@@ -8,7 +8,7 @@ const VideoList = ({ videos, onVideoDetail }) => {
       <List divided relaxed>
         {videos.map(video => (
           <VideoItem
-            key={video.id.videoId}
+            key={video.id.videoId || video.id.channelId || video.id.playlistId}
             video={video}
             videoItemClick={onVideoDetail}
           />
