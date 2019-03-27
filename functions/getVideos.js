@@ -17,7 +17,8 @@ exports.handler = (event, context, callback) => {
         q: event.queryStringParameters.q,
         maxResult: "5",
         order: "viewCount",
-        key: KEY
+        key: KEY,
+        pageToken: event.queryStringParameters.pageToken
       }
     })
     .then(res => send(res.data))

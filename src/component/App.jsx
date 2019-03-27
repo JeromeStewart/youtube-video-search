@@ -45,9 +45,7 @@ class App extends Component {
       videoDetail: data.items[0],
       nextPageToken: data.nextPageToken
     });
-
-    console.log(this.state.videos);
-
+    console.log(data);
     localStorage.setItem("term", this.state.searchInput);
   };
 
@@ -55,21 +53,23 @@ class App extends Component {
     this.setState({ videoDetail: video });
   };
 
-  handleVideoList = token => {
-    fetch(
+  handleVideoList = async token => {
+    console.log(token);
+    const response = await fetch(
       `/.netlify/functions/getVideos?q=${
         this.state.searchInput
       }&pageToken=${token}`
-    )
-      .then(res => res.json())
-      .then(data =>
-        this.setState({
-          videos: data.items,
-          videoDetail: data.items[0],
-          nextPageToken: data.nextPageToken,
-          prevPageToken: data.prevPageToken
-        })
-      );
+    );
+
+    const data = await response.json();
+
+    this.setState({
+      videos: data.items,
+      videoDetail: data.items[0],
+      nextPageToken: data.nextPageToken,
+      prevPageToken: data.prevPageToken
+    });
+    console.log(data);
   };
 
   render() {
@@ -99,6 +99,7 @@ class App extends Component {
               />
               {prevPageToken === "" ? null : (
                 <Button
+                  primary
                   onClick={() => this.handleVideoList(prevPageToken)}
                   content="Previous"
                   icon="left arrow"
@@ -107,6 +108,7 @@ class App extends Component {
               )}
               {this.state.videos.length === 0 ? null : (
                 <Button
+                  primary
                   onClick={() => this.handleVideoList(nextPageToken)}
                   content="Next"
                   icon="right arrow"
