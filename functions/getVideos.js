@@ -2,7 +2,7 @@ import axios from "axios";
 
 const KEY = "AIzaSyD6Q0keD3k2PY4cbYWVJd4kYtkZ3nLXSZU";
 
-exports.handler = async (event, context, callback) => {
+exports.handler = (event, context, callback) => {
   const send = body => {
     callback(null, {
       statusCode: 200,

@@ -69,7 +69,6 @@ class App extends Component {
       nextPageToken: data.nextPageToken,
       prevPageToken: data.prevPageToken
     });
-    console.log(data);
   };
 
   render() {
