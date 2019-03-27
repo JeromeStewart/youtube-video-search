@@ -31,18 +31,22 @@ class App extends Component {
     });
   };
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
 
-    fetch(`/.netlify/functions/getVideos?q=${this.state.searchInput}`)
-      .then(res => res.json())
-      .then(data =>
-        this.setState({
-          videos: data.items,
-          videoDetail: data.items[0],
-          nextPageToken: data.nextPageToken
-        })
-      );
+    const response = await fetch(
+      `/.netlify/functions/getVideos?q=${this.state.searchInput}`
+    );
+
+    const data = await response.json();
+
+    this.setState({
+      videos: data.items,
+      videoDetail: data.items[0],
+      nextPageToken: data.nextPageToken
+    });
+
+    console.log(this.state.videos);
 
     localStorage.setItem("term", this.state.searchInput);
   };
