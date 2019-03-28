@@ -16,7 +16,7 @@ exports.handler = (event, context, callback) => {
         part: "snippet",
         q: event.queryStringParameters.q,
         maxResult: "5",
-        order: "viewCount",
+        order: "relevance",
         key: KEY,
         pageToken: event.queryStringParameters.pageToken
       }

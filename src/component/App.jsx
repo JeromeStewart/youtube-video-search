@@ -45,7 +45,6 @@ class App extends Component {
       videoDetail: data.items[0],
       nextPageToken: data.nextPageToken
     });
-    console.log(data);
     localStorage.setItem("term", this.state.searchInput);
   };
 
@@ -54,7 +53,6 @@ class App extends Component {
   };
 
   handleVideoList = async token => {
-    console.log(token);
     const response = await fetch(
       `/.netlify/functions/getVideos?q=${
         this.state.searchInput
