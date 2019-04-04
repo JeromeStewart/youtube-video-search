@@ -45,6 +45,7 @@ class App extends Component {
       videoDetail: data.items[0],
       nextPageToken: data.nextPageToken
     });
+
     localStorage.setItem("term", this.state.searchInput);
   };
 
@@ -77,6 +78,7 @@ class App extends Component {
       nextPageToken,
       prevPageToken
     } = this.state;
+
     return (
       <Container>
         <SearchBar
