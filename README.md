@@ -9,20 +9,20 @@ pages. Five videos are displayed at a time, and the videos are ordered by view c
 
 ## How to use
 
-# Type the name of the video you want to search for, and press enter. You will see five videos displayed on the right hand side, with the first video ready to be played.
+### Type the name of the video you want to search for, and press enter. You will see five videos displayed on the right hand side, with the first video ready to be played.
 
 ![alt text](https://gdurl.com/78mw)
 ![alt text](https://gdurl.com/2NQD)
 
-# You can find information about the video you are watching below it.
+### You can find information about the video you are watching below it.
 
 ![alt text](https://gdurl.com/AAE9)
 
-# You can watch another video by clicking on it.
+### You can watch another video by clicking on it.
 
 ![alt text](https://gdurl.com/lA8o)
 
-# To navigate to the next page, click on the next button.
+### To navigate to the next page, click on the next button.
 
 ![alt text](https://gdurl.com/uafk)
 ![alt text](https://gdurl.com/MhS0)
