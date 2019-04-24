@@ -29,4 +29,4 @@ pages. Five videos are displayed at a time, and the videos are ordered by view c
 
 ## Try it out live
 
-# You can use the web application live [here](https://yt-video-search.netlify.com/)
+### You can use the web application live [here](https://yt-video-search.netlify.com/)

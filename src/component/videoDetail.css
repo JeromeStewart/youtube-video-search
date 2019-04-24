@@ -1,0 +1,7 @@
+#bottom-header {
+  margin-top: 10rem;
+}
+
+#api-link :hover {
+  cursor: pointer;
+}

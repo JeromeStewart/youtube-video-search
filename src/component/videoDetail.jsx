@@ -2,13 +2,26 @@ import React from "react";
 import { Embed, Divider, Icon, Grid, Header } from "semantic-ui-react";
 import moment from "moment";
 
+import "./videoDetail.css";
+
 const VideoDetail = ({ video }) => {
   const active = Object.keys(video).length > 0 ? true : false;
   if (!active)
     return (
-      <h3>
-        Search for videos! <br /> This app was created by Jerome Stewart 😁
-      </h3>
+      <div>
+        <h3>
+          Search for videos! <br /> This app was created by Jerome Stewart 😁
+        </h3>
+        <h4 id="bottom-header">
+          Application created with{" "}
+          <a
+            id="api-link"
+            href="https://console.cloud.google.com/marketplace/details/google/youtube.googleapis.com"
+          >
+            YouTube Data API v3
+          </a>
+        </h4>
+      </div>
     );
   return (
     <React.Fragment>
